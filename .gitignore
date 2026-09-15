@@ -1,0 +1,20 @@
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Gradle / Minecraft mod build output
+.gradle/
+build/
+out/
+run/
+logs/
+*.class
+
+# OS
+.DS_Store
+Thumbs.db
