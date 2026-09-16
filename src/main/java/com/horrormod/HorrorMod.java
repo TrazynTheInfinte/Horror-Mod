@@ -1,6 +1,7 @@
 package com.horrormod;
 
 import com.horrormod.block.ModBlocks;
+import com.horrormod.effect.ModEffects;
 import com.horrormod.item.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -33,6 +34,7 @@ public class HorrorMod
 
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
+        ModEffects.MOB_EFFECTS.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
     }
 }

@@ -1,4 +1,5 @@
 {
   "itemGroup.horrormod": "Horror Mod",
-  "block.horrormod.blood_pool": "Blood Pool"
+  "block.horrormod.blood_pool": "Blood Pool",
+  "effect.horrormod.laceration": "Laceration"
 }
