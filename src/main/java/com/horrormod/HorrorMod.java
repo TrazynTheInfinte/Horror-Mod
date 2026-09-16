@@ -35,6 +35,7 @@ public class HorrorMod
                         output.accept(ModItems.BLOOD_SOAKED_QUILL.get());
                         output.accept(ModItems.OTHERWORLD_STONE.get());
                         output.accept(ModItems.OTHERWORLD_GROUND.get());
+                        output.accept(ModItems.RITUALISTIC_DAGGER.get());
                     })
                     .build());
 

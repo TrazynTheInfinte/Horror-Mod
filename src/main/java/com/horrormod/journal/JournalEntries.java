@@ -35,8 +35,10 @@ public class JournalEntries
     public static final JournalEntry OTHERWORLD_DIMENSION = JournalEntry.forDimension("otherworld", JournalCategory.DIMENSIONS,
             () -> new ItemStack(ModItems.OTHERWORLD_GROUND.get()));
 
+    public static final JournalEntry RITUALISTIC_DAGGER = JournalEntry.forItem("ritualistic_dagger", JournalCategory.ITEMS, ModItems.RITUALISTIC_DAGGER);
+
     public static final List<JournalEntry> ALL = List.of(BLOOD_POOL, LACERATION, BLOOD_SOAKED_QUILL, THE_OTHERWORLD, THE_RITUALISTS,
-            OTHERWORLD_STONE, OTHERWORLD_GROUND, OTHERWORLD_DIMENSION);
+            OTHERWORLD_STONE, OTHERWORLD_GROUND, OTHERWORLD_DIMENSION, RITUALISTIC_DAGGER);
 
     public static JournalEntry byId(String id)
     {

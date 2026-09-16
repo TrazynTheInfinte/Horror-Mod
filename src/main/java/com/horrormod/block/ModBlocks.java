@@ -33,4 +33,25 @@ public class ModBlocks
                     .mapColor(MapColor.COLOR_RED)
                     .strength(0.6f)
                     .sound(SoundType.NETHERRACK)));
+
+    // Not obtainable as an item -- only ever placed/removed by the Ritualistic Dagger and its own expiry tick.
+    public static final RegistryObject<Block> RIFT_TOP = BLOCKS.register("rift_top",
+            () -> new RiftBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_PURPLE)
+                    .noCollission()
+                    .noOcclusion()
+                    .lightLevel(state -> 8)
+                    .strength(-1.0f)
+                    .sound(SoundType.AMETHYST)
+                    .noLootTable()));
+
+    public static final RegistryObject<Block> RIFT_BOTTOM = BLOCKS.register("rift_bottom",
+            () -> new RiftBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_PURPLE)
+                    .noCollission()
+                    .noOcclusion()
+                    .lightLevel(state -> 8)
+                    .strength(-1.0f)
+                    .sound(SoundType.AMETHYST)
+                    .noLootTable()));
 }

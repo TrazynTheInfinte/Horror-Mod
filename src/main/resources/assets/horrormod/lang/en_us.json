@@ -3,6 +3,8 @@
   "block.horrormod.blood_pool": "Blood Pool",
   "block.horrormod.otherworld_stone": "Otherworld Stone",
   "block.horrormod.otherworld_ground": "Otherworld Ground",
+  "block.horrormod.rift_top": "Rift",
+  "block.horrormod.rift_bottom": "Rift",
   "effect.horrormod.laceration": "Laceration",
   "item.minecraft.potion.effect.laceration": "Potion of Laceration",
   "item.minecraft.splash_potion.effect.laceration": "Splash Potion of Laceration",
@@ -12,6 +14,9 @@
   "item.horrormod.blood_soaked_quill": "Blood-Soaked Quill",
   "message.horrormod.quill_reveal": "A piece of forbidden knowledge sears into your mind...",
   "message.horrormod.quill_silent": "The quill has nothing left to reveal.",
+  "message.horrormod.rift_no_surface": "The rift needs something solid to tear open against.",
+  "message.horrormod.rift_no_space": "There isn't enough room here for a rift.",
+  "item.horrormod.ritualistic_dagger": "Ritualistic Dagger",
   "gui.horrormod.journal.title": "Worn Journal",
   "journal.horrormod.contents": "Table of Contents",
   "journal.horrormod.empty_category": "Nothing here yet.",
@@ -39,5 +44,7 @@
   "journal.horrormod.otherworld_ground.title": "Otherworld Ground",
   "journal.horrormod.otherworld_ground.description": "The surface soil of the Otherworld. Nothing grows in it, and nothing seems to be trying to.",
   "journal.horrormod.otherworld.title": "The Otherworld",
-  "journal.horrormod.otherworld.description": "An ethereal dimension accessed through devotion and sacrifice, inhabited by beasts beyond your wildest imagination. For now, it stands empty -- whatever lived here left long before you arrived."
+  "journal.horrormod.otherworld.description": "An ethereal dimension accessed through devotion and sacrifice, inhabited by beasts beyond your wildest imagination. For now, it stands empty -- whatever lived here left long before you arrived.",
+  "journal.horrormod.ritualistic_dagger.title": "Ritualistic Dagger",
+  "journal.horrormod.ritualistic_dagger.description": "Devotion and sacrifice, made practical. Strike a solid surface with this and pay its blood price to tear open a rift to the Otherworld -- it won't stay open long, and it takes the same price to open one back."
 }

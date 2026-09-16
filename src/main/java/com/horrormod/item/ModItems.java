@@ -26,4 +26,7 @@ public class ModItems
 
     public static final RegistryObject<Item> OTHERWORLD_GROUND = ITEMS.register("otherworld_ground",
             () -> new BlockItem(ModBlocks.OTHERWORLD_GROUND.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> RITUALISTIC_DAGGER = ITEMS.register("ritualistic_dagger",
+            () -> new RitualisticDaggerItem(new Item.Properties().stacksTo(1)));
 }
