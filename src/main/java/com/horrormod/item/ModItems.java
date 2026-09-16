@@ -14,4 +14,7 @@ public class ModItems
 
     public static final RegistryObject<Item> BLOOD_POOL = ITEMS.register("blood_pool",
             () -> new BlockItem(ModBlocks.BLOOD_POOL.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> WORN_JOURNAL = ITEMS.register("worn_journal",
+            () -> new WornJournalItem(new Item.Properties().stacksTo(1)));
 }

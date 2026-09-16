@@ -3,6 +3,7 @@ package com.horrormod;
 import com.horrormod.block.ModBlocks;
 import com.horrormod.effect.ModEffects;
 import com.horrormod.item.ModItems;
+import com.horrormod.network.HorrorModNetwork;
 import com.horrormod.potion.ModBrewing;
 import com.horrormod.potion.ModPotions;
 import net.minecraft.core.registries.Registries;
@@ -28,7 +29,10 @@ public class HorrorMod
                     .withTabsBefore(CreativeModeTabs.COMBAT)
                     .title(Component.translatable("itemGroup.horrormod"))
                     .icon(() -> ModItems.BLOOD_POOL.get().getDefaultInstance())
-                    .displayItems((parameters, output) -> output.accept(ModItems.BLOOD_POOL.get()))
+                    .displayItems((parameters, output) -> {
+                        output.accept(ModItems.BLOOD_POOL.get());
+                        output.accept(ModItems.WORN_JOURNAL.get());
+                    })
                     .build());
 
     public HorrorMod()
@@ -40,6 +44,8 @@ public class HorrorMod
         ModEffects.MOB_EFFECTS.register(modEventBus);
         ModPotions.POTIONS.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
+
+        HorrorModNetwork.register();
 
         modEventBus.addListener(this::commonSetup);
     }

@@ -5,5 +5,13 @@
   "item.minecraft.potion.effect.laceration": "Potion of Laceration",
   "item.minecraft.splash_potion.effect.laceration": "Splash Potion of Laceration",
   "item.minecraft.lingering_potion.effect.laceration": "Lingering Potion of Laceration",
-  "item.minecraft.tipped_arrow.effect.laceration": "Arrow of Laceration"
+  "item.minecraft.tipped_arrow.effect.laceration": "Arrow of Laceration",
+  "item.horrormod.worn_journal": "Worn Journal",
+  "gui.horrormod.journal.title": "Worn Journal",
+  "journal.horrormod.undiscovered.title": "???",
+  "journal.horrormod.undiscovered.description": "You haven't discovered this yet.",
+  "journal.horrormod.blood_pool.title": "Blood Pool",
+  "journal.horrormod.blood_pool.description": "A pool of blood left behind by something. Purely cosmetic, but unsettling to find.",
+  "journal.horrormod.laceration.title": "Laceration",
+  "journal.horrormod.laceration.description": "A wound that won't stop bleeding. Deals damage over time like poison, and leaves blood pools behind at your feet."
 }
