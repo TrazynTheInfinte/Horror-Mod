@@ -1,6 +1,7 @@
 package com.horrormod.structure;
 
 import com.horrormod.block.ModBlocks;
+import com.horrormod.entity.CultistEntity;
 import com.horrormod.entity.ModEntities;
 import com.horrormod.entity.OtherworldlyCrystalEntity;
 import net.minecraft.core.BlockPos;
@@ -144,6 +145,29 @@ public class RitualCirclePiece extends StructurePiece
             OtherworldlyCrystalEntity crystal = new OtherworldlyCrystalEntity(ModEntities.OTHERWORLDLY_CRYSTAL.get(), level.getLevel());
             crystal.moveTo(centerX + 1.0, obeliskTop.getY() + 0.5, centerZ + 1.0, 0.0F, 0.0F);
             level.addFreshEntity(crystal);
+        }
+
+        // Fixed, one-time population -- nothing respawns here once cleared.
+        // Spawned at the shared plaza height like the Blood Pools; on strongly
+        // uneven interior ground (between the leveled obelisk/spire columns)
+        // a Cultist can end up slightly embedded or floating, same tradeoff
+        // the Blood Pool decoration already accepts.
+        int cultistCount = 3 + decorationRandom.nextInt(6);
+        for (int i = 0; i < cultistCount; i++)
+        {
+            double angle = decorationRandom.nextDouble() * Math.PI * 2;
+            int r = 1 + decorationRandom.nextInt(Math.max(1, ringRadius));
+            int cx = centerX + (int) Math.round(Math.cos(angle) * r);
+            int cz = centerZ + (int) Math.round(Math.sin(angle) * r);
+
+            if (chunkBox.isInside(new BlockPos(cx, baseY, cz)))
+            {
+                CultistEntity cultist = new CultistEntity(ModEntities.CULTIST.get(), level.getLevel());
+                cultist.moveTo(cx + 0.5, baseY, cz + 0.5, decorationRandom.nextFloat() * 360.0F, 0.0F);
+                cultist.equipStartingWeapon();
+                cultist.setPersistenceRequired();
+                level.addFreshEntity(cultist);
+            }
         }
     }
 }

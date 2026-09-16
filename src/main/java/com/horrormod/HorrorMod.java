@@ -39,6 +39,8 @@ public class HorrorMod
                         output.accept(ModItems.OTHERWORLD_STONE.get());
                         output.accept(ModItems.OTHERWORLD_GROUND.get());
                         output.accept(ModItems.RITUALISTIC_DAGGER.get());
+                        output.accept(ModItems.CULTIST_CROSSBOW.get());
+                        output.accept(ModItems.CULTIST_AXE.get());
                     })
                     .build());
 

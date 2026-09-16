@@ -2,8 +2,11 @@ package com.horrormod.item;
 
 import com.horrormod.HorrorMod;
 import com.horrormod.block.ModBlocks;
+import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CrossbowItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Tiers;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -33,4 +36,11 @@ public class ModItems
     // Not obtainable -- exists only to hold the 3D model the Otherworldly Crystal entity renders with.
     public static final RegistryObject<Item> OTHERWORLDLY_CRYSTAL_DISPLAY = ITEMS.register("otherworldly_crystal_display",
             () -> new Item(new Item.Properties()));
+
+    // Cultist weapons: vanilla crossbow/iron axe behavior, cultist-themed textures only.
+    public static final RegistryObject<Item> CULTIST_CROSSBOW = ITEMS.register("cultist_crossbow",
+            () -> new CrossbowItem(new Item.Properties().stacksTo(1).durability(465)));
+
+    public static final RegistryObject<Item> CULTIST_AXE = ITEMS.register("cultist_axe",
+            () -> new AxeItem(Tiers.IRON, 6.0F, -3.1F, new Item.Properties()));
 }

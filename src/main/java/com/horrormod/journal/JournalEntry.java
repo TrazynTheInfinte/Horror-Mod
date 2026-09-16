@@ -8,9 +8,9 @@ import java.util.function.Supplier;
 
 public class JournalEntry
 {
-    // DIMENSION and STRUCTURE entries are matched by id against the dimension's
-    // or structure's registry path (horrormod:<id>) -- see JournalEvents.
-    public enum TriggerType { ITEM, EFFECT, MANUAL, DIMENSION, STRUCTURE }
+    // DIMENSION, STRUCTURE, and ENTITY entries are matched by id against the
+    // dimension's/structure's/entity's registry path (horrormod:<id>) -- see JournalEvents.
+    public enum TriggerType { ITEM, EFFECT, MANUAL, DIMENSION, STRUCTURE, ENTITY }
 
     private final String id;
     private final JournalCategory category;
@@ -54,6 +54,11 @@ public class JournalEntry
     public static JournalEntry forStructure(String id, JournalCategory category, Supplier<ItemStack> icon)
     {
         return new JournalEntry(id, category, icon, TriggerType.STRUCTURE, null, null);
+    }
+
+    public static JournalEntry forEntity(String id, JournalCategory category, Supplier<ItemStack> icon)
+    {
+        return new JournalEntry(id, category, icon, TriggerType.ENTITY, null, null);
     }
 
     public String getId()

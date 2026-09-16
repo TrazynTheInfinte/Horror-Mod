@@ -41,8 +41,17 @@ public class JournalEntries
     public static final JournalEntry RITUAL_CIRCLE = JournalEntry.forStructure("ritual_circle", JournalCategory.STRUCTURES,
             () -> new ItemStack(Items.POLISHED_BLACKSTONE_BRICKS));
 
+    public static final JournalEntry CULTIST_CROSSBOW = JournalEntry.forItem("cultist_crossbow", JournalCategory.ITEMS, ModItems.CULTIST_CROSSBOW);
+
+    public static final JournalEntry CULTIST_AXE = JournalEntry.forItem("cultist_axe", JournalCategory.ITEMS, ModItems.CULTIST_AXE);
+
+    // id must match the entity's registry path (horrormod:cultist) -- see JournalEvents.
+    public static final JournalEntry CULTIST = JournalEntry.forEntity("cultist", JournalCategory.ENTITIES,
+            () -> new ItemStack(ModItems.CULTIST_AXE.get()));
+
     public static final List<JournalEntry> ALL = List.of(BLOOD_POOL, LACERATION, BLOOD_SOAKED_QUILL, THE_OTHERWORLD, THE_RITUALISTS,
-            OTHERWORLD_STONE, OTHERWORLD_GROUND, OTHERWORLD_DIMENSION, RITUALISTIC_DAGGER, RITUAL_CIRCLE);
+            OTHERWORLD_STONE, OTHERWORLD_GROUND, OTHERWORLD_DIMENSION, RITUALISTIC_DAGGER, RITUAL_CIRCLE,
+            CULTIST_CROSSBOW, CULTIST_AXE, CULTIST);
 
     public static JournalEntry byId(String id)
     {

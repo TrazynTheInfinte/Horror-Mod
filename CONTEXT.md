@@ -20,7 +20,11 @@ A temporary, player-summoned portal that actually teleports whoever walks into i
 _Avoid_: Portal (too generic — this project may have other portal-like things later that aren't Rifts)
 
 **Ritual Circle**:
-An Overworld structure: an obelisk surrounded by a ring of smaller spires. Physically the Ritualists' site — finding one is how the Ritualists lore entry's claims become concrete, not just text.
+An Overworld structure: an obelisk surrounded by a ring of smaller spires. Physically the Ritualists' site — finding one is how the Ritualists lore entry's claims become concrete, not just text. Still actively kept, not abandoned — the Ritualists (as Cultists) are still there.
+
+**Cultist**:
+The Ritualists, alive and present today — not descendants, not a separate group. Neutral (won't attack unprovoked); attacking one turns every Cultist at that site hostile. Spawns only as a fixed, one-time population (3-8) at a Ritual Circle's generation; killing them off empties that site permanently. Two variants by weapon: crossbow and axe, both cultist-themed reskins of vanilla weapons.
+_Avoid_: Ritualist (as the entity name — "Ritualist" stays the lore/historical term; "Cultist" is the in-game entity)
 
 **Otherworldly Crystal**:
 A purely decorative, indestructible floating crystal atop a Ritual Circle's obelisk. Visually evokes an End Crystal (floats, rotates) but is unrelated to it mechanically — no explosion, no bed interaction, no health. Part of the Ritual Circle structure, not a separately discoverable thing.

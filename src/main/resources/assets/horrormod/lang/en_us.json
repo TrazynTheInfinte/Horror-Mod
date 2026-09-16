@@ -6,6 +6,7 @@
   "block.horrormod.rift_top": "Rift",
   "block.horrormod.rift_bottom": "Rift",
   "entity.horrormod.otherworldly_crystal": "Otherworldly Crystal",
+  "entity.horrormod.cultist": "Cultist",
   "effect.horrormod.laceration": "Laceration",
   "item.minecraft.potion.effect.laceration": "Potion of Laceration",
   "item.minecraft.splash_potion.effect.laceration": "Splash Potion of Laceration",
@@ -49,5 +50,13 @@
   "journal.horrormod.ritualistic_dagger.title": "Ritualistic Dagger",
   "journal.horrormod.ritualistic_dagger.description": "Devotion and sacrifice, made practical. Strike a solid surface with this and pay its blood price to tear open a rift to the Otherworld -- it won't stay open long, and it takes the same price to open one back.",
   "journal.horrormod.ritual_circle.title": "Ritual Circle",
-  "journal.horrormod.ritual_circle.description": "An obelisk ringed by spires, exactly as the Ritualists left it. The blood pooled at its base didn't come from the Otherworld on its own -- someone brought it here on purpose."
+  "journal.horrormod.ritual_circle.description": "An obelisk ringed by spires, exactly as the Ritualists keep it. The blood pooled at its base didn't come from the Otherworld on its own -- someone still brings it here on purpose.",
+  "item.horrormod.cultist_crossbow": "Cultist Crossbow",
+  "item.horrormod.cultist_axe": "Cultist Axe",
+  "journal.horrormod.cultist_crossbow.title": "Cultist Crossbow",
+  "journal.horrormod.cultist_crossbow.description": "Carried by half the Ritualists you'll find at a circle. Functions like any crossbow -- the violet binding is decoration, not enchantment.",
+  "journal.horrormod.cultist_axe.title": "Cultist Axe",
+  "journal.horrormod.cultist_axe.description": "An iron axe, bound in cord the color of dried blood. The other half of the Ritualists carry these instead of crossbows.",
+  "journal.horrormod.cultist.title": "Cultist",
+  "journal.horrormod.cultist.description": "The Ritualists themselves -- not gone, not descendants, still keeping their circles. They leave you alone unless you start something; they won't leave each other alone once you do."
 }

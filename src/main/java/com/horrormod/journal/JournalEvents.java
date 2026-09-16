@@ -8,9 +8,12 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.levelgen.structure.Structure;
+import net.minecraft.world.phys.AABB;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.living.MobEffectEvent;
@@ -119,6 +122,24 @@ public class JournalEvents
                         new ResourceLocation(HorrorMod.MODID, entry.getId()));
                 if (serverPlayer.serverLevel().structureManager()
                         .getStructureWithPieceAt(serverPlayer.blockPosition(), structureKey).isValid())
+                {
+                    unlockedSomething |= data.discover(entry.getId());
+                }
+            }
+
+            for (JournalEntry entry : JournalEntries.ALL)
+            {
+                if (entry.getTriggerType() != JournalEntry.TriggerType.ENTITY || data.isDiscovered(entry.getId()))
+                {
+                    continue;
+                }
+                EntityType<?> entityType = ForgeRegistries.ENTITY_TYPES.getValue(new ResourceLocation(HorrorMod.MODID, entry.getId()));
+                if (entityType == null)
+                {
+                    continue;
+                }
+                AABB nearby = serverPlayer.getBoundingBox().inflate(16.0);
+                if (!serverPlayer.level().getEntities(entityType, nearby, e -> true).isEmpty())
                 {
                     unlockedSomething |= data.discover(entry.getId());
                 }

@@ -27,5 +27,12 @@ public class ClientSetup
     public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event)
     {
         event.registerEntityRenderer(ModEntities.OTHERWORLDLY_CRYSTAL.get(), OtherworldlyCrystalRenderer::new);
+        event.registerEntityRenderer(ModEntities.CULTIST.get(), CultistRenderer::new);
+    }
+
+    @SubscribeEvent
+    public static void onRegisterLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event)
+    {
+        event.registerLayerDefinition(ModClientLayers.CULTIST, CultistModel::createBodyLayer);
     }
 }
