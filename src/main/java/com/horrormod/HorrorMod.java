@@ -32,6 +32,7 @@ public class HorrorMod
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.BLOOD_POOL.get());
                         output.accept(ModItems.WORN_JOURNAL.get());
+                        output.accept(ModItems.BLOOD_SOAKED_QUILL.get());
                     })
                     .build());
 

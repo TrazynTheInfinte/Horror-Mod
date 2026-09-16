@@ -7,6 +7,9 @@
   "item.minecraft.lingering_potion.effect.laceration": "Lingering Potion of Laceration",
   "item.minecraft.tipped_arrow.effect.laceration": "Arrow of Laceration",
   "item.horrormod.worn_journal": "Worn Journal",
+  "item.horrormod.blood_soaked_quill": "Blood-Soaked Quill",
+  "message.horrormod.quill_reveal": "A piece of forbidden knowledge sears into your mind...",
+  "message.horrormod.quill_silent": "The quill has nothing left to reveal.",
   "gui.horrormod.journal.title": "Worn Journal",
   "journal.horrormod.contents": "Table of Contents",
   "journal.horrormod.empty_category": "Nothing here yet.",
@@ -22,5 +25,11 @@
   "journal.horrormod.blood_pool.title": "Blood Pool",
   "journal.horrormod.blood_pool.description": "A pool of blood left behind by something. Purely cosmetic, but unsettling to find.",
   "journal.horrormod.laceration.title": "Laceration",
-  "journal.horrormod.laceration.description": "A wound that won't stop bleeding. Deals damage over time like poison, and leaves blood pools behind at your feet."
+  "journal.horrormod.laceration.description": "A wound that won't stop bleeding. Deals damage over time like poison, and leaves blood pools behind at your feet.",
+  "journal.horrormod.blood_soaked_quill.title": "Blood-Soaked Quill",
+  "journal.horrormod.blood_soaked_quill.description": "A ritualist's quill, made from the bones of the otherworld and the finest feathers. Writing with it costs blood, but reveals secrets nothing else will.",
+  "journal.horrormod.the_otherworld.title": "The Otherworld",
+  "journal.horrormod.the_otherworld.description": "Something bleeds through from beyond, thin as it is. The pools left behind are not blood as we know it, and whatever bled it has been gone a long time.",
+  "journal.horrormod.the_ritualists.title": "The Ritualists",
+  "journal.horrormod.the_ritualists.description": "Before the pools, there were those who sought them out on purpose. Their quills still remember what they were used for, even if the hands that held them do not."
 }

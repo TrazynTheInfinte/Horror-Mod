@@ -19,7 +19,15 @@ public class JournalEntries
     public static final JournalEntry LACERATION = JournalEntry.forEffect("laceration", JournalCategory.EFFECTS, ModEffects.LACERATION,
             () -> PotionUtils.setPotion(new ItemStack(Items.SPLASH_POTION), ModPotions.LACERATION.get()));
 
-    public static final List<JournalEntry> ALL = List.of(BLOOD_POOL, LACERATION);
+    public static final JournalEntry BLOOD_SOAKED_QUILL = JournalEntry.forItem("blood_soaked_quill", JournalCategory.ITEMS, ModItems.BLOOD_SOAKED_QUILL);
+
+    public static final JournalEntry THE_OTHERWORLD = JournalEntry.manual("the_otherworld", JournalCategory.LORE,
+            () -> new ItemStack(ModItems.BLOOD_SOAKED_QUILL.get()));
+
+    public static final JournalEntry THE_RITUALISTS = JournalEntry.manual("the_ritualists", JournalCategory.LORE,
+            () -> new ItemStack(ModItems.BLOOD_SOAKED_QUILL.get()));
+
+    public static final List<JournalEntry> ALL = List.of(BLOOD_POOL, LACERATION, BLOOD_SOAKED_QUILL, THE_OTHERWORLD, THE_RITUALISTS);
 
     public static JournalEntry byId(String id)
     {

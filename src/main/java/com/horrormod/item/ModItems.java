@@ -17,4 +17,7 @@ public class ModItems
 
     public static final RegistryObject<Item> WORN_JOURNAL = ITEMS.register("worn_journal",
             () -> new WornJournalItem(new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> BLOOD_SOAKED_QUILL = ITEMS.register("blood_soaked_quill",
+            () -> new BloodSoakedQuillItem(new Item.Properties().stacksTo(1)));
 }

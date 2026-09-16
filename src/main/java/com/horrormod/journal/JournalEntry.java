@@ -8,7 +8,7 @@ import java.util.function.Supplier;
 
 public class JournalEntry
 {
-    public enum TriggerType { ITEM, EFFECT }
+    public enum TriggerType { ITEM, EFFECT, MANUAL }
 
     private final String id;
     private final JournalCategory category;
@@ -36,6 +36,12 @@ public class JournalEntry
     public static JournalEntry forEffect(String id, JournalCategory category, Supplier<MobEffect> effect, Supplier<ItemStack> icon)
     {
         return new JournalEntry(id, category, icon, TriggerType.EFFECT, null, effect);
+    }
+
+    // Discovered only by explicit game logic (e.g. an item's use effect), not by passive scanning.
+    public static JournalEntry manual(String id, JournalCategory category, Supplier<ItemStack> icon)
+    {
+        return new JournalEntry(id, category, icon, TriggerType.MANUAL, null, null);
     }
 
     public String getId()
