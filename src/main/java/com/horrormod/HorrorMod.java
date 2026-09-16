@@ -3,12 +3,15 @@ package com.horrormod;
 import com.horrormod.block.ModBlocks;
 import com.horrormod.effect.ModEffects;
 import com.horrormod.item.ModItems;
+import com.horrormod.potion.ModBrewing;
+import com.horrormod.potion.ModPotions;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
@@ -35,6 +38,14 @@ public class HorrorMod
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
         ModEffects.MOB_EFFECTS.register(modEventBus);
+        ModPotions.POTIONS.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
+
+        modEventBus.addListener(this::commonSetup);
+    }
+
+    private void commonSetup(FMLCommonSetupEvent event)
+    {
+        ModBrewing.register(event);
     }
 }

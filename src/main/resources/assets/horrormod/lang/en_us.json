@@ -1,5 +1,9 @@
 {
   "itemGroup.horrormod": "Horror Mod",
   "block.horrormod.blood_pool": "Blood Pool",
-  "effect.horrormod.laceration": "Laceration"
+  "effect.horrormod.laceration": "Laceration",
+  "item.minecraft.potion.effect.laceration": "Potion of Laceration",
+  "item.minecraft.splash_potion.effect.laceration": "Splash Potion of Laceration",
+  "item.minecraft.lingering_potion.effect.laceration": "Lingering Potion of Laceration",
+  "item.minecraft.tipped_arrow.effect.laceration": "Arrow of Laceration"
 }
