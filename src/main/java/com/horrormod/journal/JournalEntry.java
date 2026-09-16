@@ -11,34 +11,41 @@ public class JournalEntry
     public enum TriggerType { ITEM, EFFECT }
 
     private final String id;
+    private final JournalCategory category;
     private final Supplier<ItemStack> icon;
     private final TriggerType triggerType;
     private final Supplier<Item> triggerItem;
     private final Supplier<MobEffect> triggerEffect;
 
-    private JournalEntry(String id, Supplier<ItemStack> icon, TriggerType triggerType,
+    private JournalEntry(String id, JournalCategory category, Supplier<ItemStack> icon, TriggerType triggerType,
                           Supplier<Item> triggerItem, Supplier<MobEffect> triggerEffect)
     {
         this.id = id;
+        this.category = category;
         this.icon = icon;
         this.triggerType = triggerType;
         this.triggerItem = triggerItem;
         this.triggerEffect = triggerEffect;
     }
 
-    public static JournalEntry forItem(String id, Supplier<Item> item)
+    public static JournalEntry forItem(String id, JournalCategory category, Supplier<Item> item)
     {
-        return new JournalEntry(id, () -> new ItemStack(item.get()), TriggerType.ITEM, item, null);
+        return new JournalEntry(id, category, () -> new ItemStack(item.get()), TriggerType.ITEM, item, null);
     }
 
-    public static JournalEntry forEffect(String id, Supplier<MobEffect> effect, Supplier<ItemStack> icon)
+    public static JournalEntry forEffect(String id, JournalCategory category, Supplier<MobEffect> effect, Supplier<ItemStack> icon)
     {
-        return new JournalEntry(id, icon, TriggerType.EFFECT, null, effect);
+        return new JournalEntry(id, category, icon, TriggerType.EFFECT, null, effect);
     }
 
     public String getId()
     {
         return id;
+    }
+
+    public JournalCategory getCategory()
+    {
+        return category;
     }
 
     public String getTitleKey()

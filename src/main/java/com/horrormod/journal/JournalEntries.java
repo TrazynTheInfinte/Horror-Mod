@@ -7,15 +7,16 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.PotionUtils;
 
+import java.util.ArrayList;
 import java.util.List;
 
 // The full list of everything the journal can teach the player about.
 // Add an entry here whenever a new discoverable feature is added to the mod.
 public class JournalEntries
 {
-    public static final JournalEntry BLOOD_POOL = JournalEntry.forItem("blood_pool", ModItems.BLOOD_POOL);
+    public static final JournalEntry BLOOD_POOL = JournalEntry.forItem("blood_pool", JournalCategory.ITEMS, ModItems.BLOOD_POOL);
 
-    public static final JournalEntry LACERATION = JournalEntry.forEffect("laceration", ModEffects.LACERATION,
+    public static final JournalEntry LACERATION = JournalEntry.forEffect("laceration", JournalCategory.EFFECTS, ModEffects.LACERATION,
             () -> PotionUtils.setPotion(new ItemStack(Items.SPLASH_POTION), ModPotions.LACERATION.get()));
 
     public static final List<JournalEntry> ALL = List.of(BLOOD_POOL, LACERATION);
@@ -30,5 +31,18 @@ public class JournalEntries
             }
         }
         return null;
+    }
+
+    public static List<JournalEntry> byCategory(JournalCategory category)
+    {
+        List<JournalEntry> result = new ArrayList<>();
+        for (JournalEntry entry : ALL)
+        {
+            if (entry.getCategory() == category)
+            {
+                result.add(entry);
+            }
+        }
+        return result;
     }
 }
