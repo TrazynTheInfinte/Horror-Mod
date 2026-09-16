@@ -10,10 +10,14 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.state.BlockState;
 
-// Right-click a solid block face to spend the Blood Price (3 hearts) and open
-// a Rift -- two stacked blocks in the clear space in front of that face.
-// Reusable: the dagger itself is never consumed or damaged.
+// Right-click the ground (a block's top face) to spend the Blood Price
+// (3 hearts) and tear open a Rift -- a two-block-long fissure lying flush
+// on that surface, running away from the player in whichever horizontal
+// direction they're facing. Reusable: the dagger itself is never consumed
+// or damaged.
 public class RitualisticDaggerItem extends Item
 {
     private static final int RIFT_LIFETIME_TICKS = 600; // 30 seconds
@@ -35,26 +39,32 @@ public class RitualisticDaggerItem extends Item
 
         Player player = context.getPlayer();
         BlockPos clickedPos = context.getClickedPos();
-        Direction face = context.getClickedFace();
+        Direction clickedFace = context.getClickedFace();
 
-        if (!level.getBlockState(clickedPos).isFaceSturdy(level, clickedPos, face))
+        if (clickedFace != Direction.UP || !level.getBlockState(clickedPos).isFaceSturdy(level, clickedPos, clickedFace))
         {
             return fail(player, "message.horrormod.rift_no_surface");
         }
 
-        BlockPos bottomPos = clickedPos.relative(face);
-        BlockPos topPos = bottomPos.above();
+        Direction facing = player != null ? player.getDirection() : Direction.NORTH;
+        BlockPos nearPos = clickedPos.above();
+        BlockPos farPos = nearPos.relative(facing);
+        BlockPos farGroundPos = farPos.below();
 
-        if (!level.getBlockState(bottomPos).isAir() || !level.getBlockState(topPos).isAir())
+        boolean farGroundSturdy = level.getBlockState(farGroundPos).isFaceSturdy(level, farGroundPos, Direction.UP);
+        if (!level.getBlockState(nearPos).isAir() || !level.getBlockState(farPos).isAir() || !farGroundSturdy)
         {
             return fail(player, "message.horrormod.rift_no_space");
         }
 
         ServerLevel serverLevel = (ServerLevel) level;
-        serverLevel.setBlockAndUpdate(bottomPos, ModBlocks.RIFT_BOTTOM.get().defaultBlockState());
-        serverLevel.setBlockAndUpdate(topPos, ModBlocks.RIFT_TOP.get().defaultBlockState());
-        serverLevel.scheduleTick(bottomPos, ModBlocks.RIFT_BOTTOM.get(), RIFT_LIFETIME_TICKS);
-        serverLevel.scheduleTick(topPos, ModBlocks.RIFT_TOP.get(), RIFT_LIFETIME_TICKS);
+        BlockState nearState = ModBlocks.RIFT_NEAR.get().defaultBlockState().setValue(HorizontalDirectionalBlock.FACING, facing);
+        BlockState farState = ModBlocks.RIFT_FAR.get().defaultBlockState().setValue(HorizontalDirectionalBlock.FACING, facing);
+
+        serverLevel.setBlockAndUpdate(nearPos, nearState);
+        serverLevel.setBlockAndUpdate(farPos, farState);
+        serverLevel.scheduleTick(nearPos, ModBlocks.RIFT_NEAR.get(), RIFT_LIFETIME_TICKS);
+        serverLevel.scheduleTick(farPos, ModBlocks.RIFT_FAR.get(), RIFT_LIFETIME_TICKS);
 
         if (player != null)
         {

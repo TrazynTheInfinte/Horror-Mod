@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=south": { "model": "horrormod:block/rift_near", "y": 0 },
+    "facing=west": { "model": "horrormod:block/rift_near", "y": 90 },
+    "facing=north": { "model": "horrormod:block/rift_near", "y": 180 },
+    "facing=east": { "model": "horrormod:block/rift_near", "y": 270 }
+  }
+}

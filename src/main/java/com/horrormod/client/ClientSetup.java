@@ -18,8 +18,8 @@ public class ClientSetup
     public static void onClientSetup(FMLClientSetupEvent event)
     {
         event.enqueueWork(() -> {
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.RIFT_TOP.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.RIFT_BOTTOM.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.RIFT_NEAR.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.RIFT_FAR.get(), RenderType.cutout());
         });
     }
 

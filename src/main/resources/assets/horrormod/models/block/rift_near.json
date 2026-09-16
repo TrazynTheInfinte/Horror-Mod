@@ -1,0 +1,16 @@
+{
+  "textures": {
+    "particle": "horrormod:block/rift_near",
+    "texture": "horrormod:block/rift_near"
+  },
+  "elements": [
+    {
+      "from": [0, 0, 0],
+      "to": [16, 1, 16],
+      "faces": {
+        "down": { "texture": "#texture", "cullface": "down" },
+        "up": { "texture": "#texture" }
+      }
+    }
+  ]
+}

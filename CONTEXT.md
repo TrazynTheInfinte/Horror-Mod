@@ -16,7 +16,7 @@ _Avoid_: Leakage, spillover
 The base terrain and surface blocks of the Otherworld dimension. Visually distinct from Overworld stone/dirt — they are not reskinned vanilla blocks.
 
 **Rift**:
-A temporary, player-summoned portal that actually teleports whoever walks into it to/from the Otherworld. First summoned by the Ritualistic Dagger; not tied to any one item going forward — future items could open a Rift too. This is the "devotion and sacrifice" access mechanism the Otherworld entry refers to.
+A temporary, player-summoned fissure lying flush on the ground that actually teleports whoever walks over it to/from the Otherworld. A tear in the ground, not a standing doorway. First summoned by the Ritualistic Dagger; not tied to any one item going forward — future items could open a Rift too. This is the "devotion and sacrifice" access mechanism the Otherworld entry refers to.
 _Avoid_: Portal (too generic — this project may have other portal-like things later that aren't Rifts)
 
 **Ritual Circle**:

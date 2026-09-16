@@ -35,7 +35,8 @@ public class ModBlocks
                     .sound(SoundType.NETHERRACK)));
 
     // Not obtainable as an item -- only ever placed/removed by the Ritualistic Dagger and its own expiry tick.
-    public static final RegistryObject<Block> RIFT_TOP = BLOCKS.register("rift_top",
+    // A thin, ground-flush fissure two blocks long (near/far halves), not a standing portal.
+    public static final RegistryObject<Block> RIFT_NEAR = BLOCKS.register("rift_near",
             () -> new RiftBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_PURPLE)
                     .noCollission()
@@ -45,7 +46,7 @@ public class ModBlocks
                     .sound(SoundType.AMETHYST)
                     .noLootTable()));
 
-    public static final RegistryObject<Block> RIFT_BOTTOM = BLOCKS.register("rift_bottom",
+    public static final RegistryObject<Block> RIFT_FAR = BLOCKS.register("rift_far",
             () -> new RiftBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_PURPLE)
                     .noCollission()
