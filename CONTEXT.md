@@ -19,6 +19,12 @@ The base terrain and surface blocks of the Otherworld dimension. Visually distin
 A temporary, player-summoned portal that actually teleports whoever walks into it to/from the Otherworld. First summoned by the Ritualistic Dagger; not tied to any one item going forward — future items could open a Rift too. This is the "devotion and sacrifice" access mechanism the Otherworld entry refers to.
 _Avoid_: Portal (too generic — this project may have other portal-like things later that aren't Rifts)
 
+**Ritual Circle**:
+An Overworld structure: an obelisk surrounded by a ring of smaller spires. Physically the Ritualists' site — finding one is how the Ritualists lore entry's claims become concrete, not just text.
+
+**Otherworldly Crystal**:
+A purely decorative, indestructible floating crystal atop a Ritual Circle's obelisk. Visually evokes an End Crystal (floats, rotates) but is unrelated to it mechanically — no explosion, no bed interaction, no health. Part of the Ritual Circle structure, not a separately discoverable thing.
+
 **Blood Price**:
 The cost, paid in the player's own health, for using a ritual item's otherworldly effect. Applies to the Blood-Soaked Quill (2 damage per reveal) and the Ritualistic Dagger (opens a Rift). Any future ritual item should state its Blood Price explicitly.
 _Avoid_: Sacrifice cost, HP cost

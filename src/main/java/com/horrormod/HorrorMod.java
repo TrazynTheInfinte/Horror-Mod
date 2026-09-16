@@ -2,10 +2,13 @@ package com.horrormod;
 
 import com.horrormod.block.ModBlocks;
 import com.horrormod.effect.ModEffects;
+import com.horrormod.entity.ModEntities;
 import com.horrormod.item.ModItems;
 import com.horrormod.network.HorrorModNetwork;
 import com.horrormod.potion.ModBrewing;
 import com.horrormod.potion.ModPotions;
+import com.horrormod.structure.ModStructurePieces;
+import com.horrormod.structure.ModStructures;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -48,6 +51,9 @@ public class HorrorMod
         ModEffects.MOB_EFFECTS.register(modEventBus);
         ModPotions.POTIONS.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
+        ModStructures.STRUCTURE_TYPES.register(modEventBus);
+        ModStructurePieces.STRUCTURE_PIECES.register(modEventBus);
+        ModEntities.ENTITY_TYPES.register(modEventBus);
 
         HorrorModNetwork.register();
 

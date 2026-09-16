@@ -3,11 +3,14 @@ package com.horrormod.journal;
 import com.horrormod.HorrorMod;
 import com.horrormod.network.HorrorModNetwork;
 import com.horrormod.network.SyncJournalPacket;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.levelgen.structure.Structure;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.living.MobEffectEvent;
@@ -105,6 +108,22 @@ public class JournalEvents
                     unlockedSomething |= data.discover(entry.getId());
                 }
             }
+
+            for (JournalEntry entry : JournalEntries.ALL)
+            {
+                if (entry.getTriggerType() != JournalEntry.TriggerType.STRUCTURE || data.isDiscovered(entry.getId()))
+                {
+                    continue;
+                }
+                ResourceKey<Structure> structureKey = ResourceKey.create(Registries.STRUCTURE,
+                        new ResourceLocation(HorrorMod.MODID, entry.getId()));
+                if (serverPlayer.serverLevel().structureManager()
+                        .getStructureWithPieceAt(serverPlayer.blockPosition(), structureKey).isValid())
+                {
+                    unlockedSomething |= data.discover(entry.getId());
+                }
+            }
+
             if (unlockedSomething)
             {
                 syncToClient(serverPlayer);

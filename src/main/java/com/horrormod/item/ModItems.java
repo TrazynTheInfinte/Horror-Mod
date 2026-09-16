@@ -29,4 +29,8 @@ public class ModItems
 
     public static final RegistryObject<Item> RITUALISTIC_DAGGER = ITEMS.register("ritualistic_dagger",
             () -> new RitualisticDaggerItem(new Item.Properties().stacksTo(1)));
+
+    // Not obtainable -- exists only to hold the 3D model the Otherworldly Crystal entity renders with.
+    public static final RegistryObject<Item> OTHERWORLDLY_CRYSTAL_DISPLAY = ITEMS.register("otherworldly_crystal_display",
+            () -> new Item(new Item.Properties()));
 }

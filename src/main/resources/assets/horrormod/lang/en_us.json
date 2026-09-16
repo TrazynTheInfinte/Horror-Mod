@@ -5,6 +5,7 @@
   "block.horrormod.otherworld_ground": "Otherworld Ground",
   "block.horrormod.rift_top": "Rift",
   "block.horrormod.rift_bottom": "Rift",
+  "entity.horrormod.otherworldly_crystal": "Otherworldly Crystal",
   "effect.horrormod.laceration": "Laceration",
   "item.minecraft.potion.effect.laceration": "Potion of Laceration",
   "item.minecraft.splash_potion.effect.laceration": "Splash Potion of Laceration",
@@ -46,5 +47,7 @@
   "journal.horrormod.otherworld.title": "The Otherworld",
   "journal.horrormod.otherworld.description": "An ethereal dimension accessed through devotion and sacrifice, inhabited by beasts beyond your wildest imagination. For now, it stands empty -- whatever lived here left long before you arrived.",
   "journal.horrormod.ritualistic_dagger.title": "Ritualistic Dagger",
-  "journal.horrormod.ritualistic_dagger.description": "Devotion and sacrifice, made practical. Strike a solid surface with this and pay its blood price to tear open a rift to the Otherworld -- it won't stay open long, and it takes the same price to open one back."
+  "journal.horrormod.ritualistic_dagger.description": "Devotion and sacrifice, made practical. Strike a solid surface with this and pay its blood price to tear open a rift to the Otherworld -- it won't stay open long, and it takes the same price to open one back.",
+  "journal.horrormod.ritual_circle.title": "Ritual Circle",
+  "journal.horrormod.ritual_circle.description": "An obelisk ringed by spires, exactly as the Ritualists left it. The blood pooled at its base didn't come from the Otherworld on its own -- someone brought it here on purpose."
 }

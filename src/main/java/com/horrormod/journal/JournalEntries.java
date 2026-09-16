@@ -37,8 +37,12 @@ public class JournalEntries
 
     public static final JournalEntry RITUALISTIC_DAGGER = JournalEntry.forItem("ritualistic_dagger", JournalCategory.ITEMS, ModItems.RITUALISTIC_DAGGER);
 
+    // id must match the structure's registry path (horrormod:ritual_circle) -- see JournalEvents.
+    public static final JournalEntry RITUAL_CIRCLE = JournalEntry.forStructure("ritual_circle", JournalCategory.STRUCTURES,
+            () -> new ItemStack(Items.POLISHED_BLACKSTONE_BRICKS));
+
     public static final List<JournalEntry> ALL = List.of(BLOOD_POOL, LACERATION, BLOOD_SOAKED_QUILL, THE_OTHERWORLD, THE_RITUALISTS,
-            OTHERWORLD_STONE, OTHERWORLD_GROUND, OTHERWORLD_DIMENSION, RITUALISTIC_DAGGER);
+            OTHERWORLD_STONE, OTHERWORLD_GROUND, OTHERWORLD_DIMENSION, RITUALISTIC_DAGGER, RITUAL_CIRCLE);
 
     public static JournalEntry byId(String id)
     {
