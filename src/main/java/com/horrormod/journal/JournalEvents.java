@@ -61,10 +61,23 @@ public class JournalEvents
     @SubscribeEvent
     public static void onPlayerChangedDimension(PlayerEvent.PlayerChangedDimensionEvent event)
     {
-        if (event.getEntity() instanceof ServerPlayer serverPlayer)
+        if (!(event.getEntity() instanceof ServerPlayer serverPlayer))
         {
-            syncToClient(serverPlayer);
+            return;
         }
+
+        String dimensionPath = event.getTo().location().getPath();
+        serverPlayer.getCapability(JournalDataCapability.JOURNAL_DATA).ifPresent(data -> {
+            for (JournalEntry entry : JournalEntries.ALL)
+            {
+                if (entry.getTriggerType() == JournalEntry.TriggerType.DIMENSION && entry.getId().equals(dimensionPath))
+                {
+                    data.discover(entry.getId());
+                }
+            }
+        });
+
+        syncToClient(serverPlayer);
     }
 
     @SubscribeEvent

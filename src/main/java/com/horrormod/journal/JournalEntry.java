@@ -8,7 +8,9 @@ import java.util.function.Supplier;
 
 public class JournalEntry
 {
-    public enum TriggerType { ITEM, EFFECT, MANUAL }
+    // DIMENSION entries are matched by id against the dimension's registry path
+    // (horrormod:<id>) -- see JournalEvents#onPlayerChangedDimension.
+    public enum TriggerType { ITEM, EFFECT, MANUAL, DIMENSION }
 
     private final String id;
     private final JournalCategory category;
@@ -42,6 +44,11 @@ public class JournalEntry
     public static JournalEntry manual(String id, JournalCategory category, Supplier<ItemStack> icon)
     {
         return new JournalEntry(id, category, icon, TriggerType.MANUAL, null, null);
+    }
+
+    public static JournalEntry forDimension(String id, JournalCategory category, Supplier<ItemStack> icon)
+    {
+        return new JournalEntry(id, category, icon, TriggerType.DIMENSION, null, null);
     }
 
     public String getId()

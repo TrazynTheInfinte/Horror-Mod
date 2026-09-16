@@ -27,7 +27,16 @@ public class JournalEntries
     public static final JournalEntry THE_RITUALISTS = JournalEntry.manual("the_ritualists", JournalCategory.LORE,
             () -> new ItemStack(ModItems.BLOOD_SOAKED_QUILL.get()));
 
-    public static final List<JournalEntry> ALL = List.of(BLOOD_POOL, LACERATION, BLOOD_SOAKED_QUILL, THE_OTHERWORLD, THE_RITUALISTS);
+    public static final JournalEntry OTHERWORLD_STONE = JournalEntry.forItem("otherworld_stone", JournalCategory.ITEMS, ModItems.OTHERWORLD_STONE);
+
+    public static final JournalEntry OTHERWORLD_GROUND = JournalEntry.forItem("otherworld_ground", JournalCategory.ITEMS, ModItems.OTHERWORLD_GROUND);
+
+    // id must match the dimension's registry path (horrormod:otherworld) -- see JournalEvents.
+    public static final JournalEntry OTHERWORLD_DIMENSION = JournalEntry.forDimension("otherworld", JournalCategory.DIMENSIONS,
+            () -> new ItemStack(ModItems.OTHERWORLD_GROUND.get()));
+
+    public static final List<JournalEntry> ALL = List.of(BLOOD_POOL, LACERATION, BLOOD_SOAKED_QUILL, THE_OTHERWORLD, THE_RITUALISTS,
+            OTHERWORLD_STONE, OTHERWORLD_GROUND, OTHERWORLD_DIMENSION);
 
     public static JournalEntry byId(String id)
     {

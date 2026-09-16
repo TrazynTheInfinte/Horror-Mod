@@ -1,6 +1,8 @@
 {
   "itemGroup.horrormod": "Horror Mod",
   "block.horrormod.blood_pool": "Blood Pool",
+  "block.horrormod.otherworld_stone": "Otherworld Stone",
+  "block.horrormod.otherworld_ground": "Otherworld Ground",
   "effect.horrormod.laceration": "Laceration",
   "item.minecraft.potion.effect.laceration": "Potion of Laceration",
   "item.minecraft.splash_potion.effect.laceration": "Splash Potion of Laceration",
@@ -31,5 +33,11 @@
   "journal.horrormod.the_otherworld.title": "The Otherworld",
   "journal.horrormod.the_otherworld.description": "Something bleeds through from beyond, thin as it is. The pools left behind are not blood as we know it, and whatever bled it has been gone a long time.",
   "journal.horrormod.the_ritualists.title": "The Ritualists",
-  "journal.horrormod.the_ritualists.description": "Before the pools, there were those who sought them out on purpose. Their quills still remember what they were used for, even if the hands that held them do not."
+  "journal.horrormod.the_ritualists.description": "Before the pools, there were those who sought them out on purpose. Their quills still remember what they were used for, even if the hands that held them do not.",
+  "journal.horrormod.otherworld_stone.title": "Otherworld Stone",
+  "journal.horrormod.otherworld_stone.description": "Stone from somewhere that isn't here. It's colder than it should be, and doesn't echo right when struck.",
+  "journal.horrormod.otherworld_ground.title": "Otherworld Ground",
+  "journal.horrormod.otherworld_ground.description": "The surface soil of the Otherworld. Nothing grows in it, and nothing seems to be trying to.",
+  "journal.horrormod.otherworld.title": "The Otherworld",
+  "journal.horrormod.otherworld.description": "An ethereal dimension accessed through devotion and sacrifice, inhabited by beasts beyond your wildest imagination. For now, it stands empty -- whatever lived here left long before you arrived."
 }

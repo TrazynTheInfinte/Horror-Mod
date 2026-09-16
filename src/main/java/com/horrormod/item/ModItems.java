@@ -20,4 +20,10 @@ public class ModItems
 
     public static final RegistryObject<Item> BLOOD_SOAKED_QUILL = ITEMS.register("blood_soaked_quill",
             () -> new BloodSoakedQuillItem(new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> OTHERWORLD_STONE = ITEMS.register("otherworld_stone",
+            () -> new BlockItem(ModBlocks.OTHERWORLD_STONE.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> OTHERWORLD_GROUND = ITEMS.register("otherworld_ground",
+            () -> new BlockItem(ModBlocks.OTHERWORLD_GROUND.get(), new Item.Properties()));
 }

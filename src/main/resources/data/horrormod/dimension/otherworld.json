@@ -1,0 +1,11 @@
+{
+  "type": "horrormod:otherworld",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "horrormod:otherworld",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "horrormod:otherworld"
+    }
+  }
+}
