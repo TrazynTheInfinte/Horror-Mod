@@ -2,10 +2,10 @@
   "carvers": {},
   "downfall": 0.0,
   "effects": {
-    "fog_color": 3874848,
-    "sky_color": 2757664,
-    "water_color": 4853776,
-    "water_fog_color": 1705992
+    "fog_color": 6710886,
+    "sky_color": 5066061,
+    "water_color": 5851545,
+    "water_fog_color": 3355443
   },
   "features": [
     [],
@@ -17,7 +17,7 @@
     [],
     [],
     [],
-    [],
+    ["horrormod:dead_tree"],
     []
   ],
   "has_precipitation": false,

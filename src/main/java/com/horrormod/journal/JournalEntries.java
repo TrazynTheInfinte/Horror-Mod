@@ -35,6 +35,8 @@ public class JournalEntries
     public static final JournalEntry OTHERWORLD_DIMENSION = JournalEntry.forDimension("otherworld", JournalCategory.DIMENSIONS,
             () -> new ItemStack(ModItems.OTHERWORLD_GROUND.get()));
 
+    public static final JournalEntry DEAD_LOG = JournalEntry.forItem("dead_log", JournalCategory.ITEMS, ModItems.DEAD_LOG);
+
     public static final JournalEntry RITUALISTIC_DAGGER = JournalEntry.forItem("ritualistic_dagger", JournalCategory.ITEMS, ModItems.RITUALISTIC_DAGGER);
 
     // id must match the structure's registry path (horrormod:ritual_circle) -- see JournalEvents.
@@ -50,7 +52,7 @@ public class JournalEntries
             () -> new ItemStack(ModItems.CULTIST_AXE.get()));
 
     public static final List<JournalEntry> ALL = List.of(BLOOD_POOL, LACERATION, BLOOD_SOAKED_QUILL, THE_OTHERWORLD, THE_RITUALISTS,
-            OTHERWORLD_STONE, OTHERWORLD_GROUND, OTHERWORLD_DIMENSION, RITUALISTIC_DAGGER, RITUAL_CIRCLE,
+            OTHERWORLD_STONE, OTHERWORLD_GROUND, DEAD_LOG, OTHERWORLD_DIMENSION, RITUALISTIC_DAGGER, RITUAL_CIRCLE,
             CULTIST_CROSSBOW, CULTIST_AXE, CULTIST);
 
     public static JournalEntry byId(String id)

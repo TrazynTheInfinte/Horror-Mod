@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=y": { "model": "horrormod:block/dead_log" },
+    "axis=z": { "model": "horrormod:block/dead_log", "x": 90 },
+    "axis=x": { "model": "horrormod:block/dead_log", "x": 90, "y": 90 }
+  }
+}

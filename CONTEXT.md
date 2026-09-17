@@ -5,8 +5,12 @@ A Minecraft (Forge, 1.20.1) mod centered on a bleed-through from another reality
 ## Language
 
 **Otherworld**:
-The ethereal dimension bleeding into the Overworld. Eventually reached through devotion and sacrifice (mechanism not yet built); inhabited by beasts beyond imagination (not yet implemented — the dimension currently ships empty/abandoned). Whatever originally caused the bleed-through has been gone a long time.
-_Avoid_: The Other Side, The Rift (as a place name — "rift" is reserved for the eventual travel mechanism itself, not the destination)
+The ethereal dimension bleeding into the Overworld. Reached through devotion and sacrifice (the Rift). A washed-out, greyscale place — desaturated even in the GUI while you're there — of barren ground scattered with dead, leafless trees (some standing, some fallen); inhabited by beasts beyond imagination (not yet implemented — no creatures live here yet). Whatever originally caused the bleed-through has been gone a long time.
+_Avoid_: The Other Side, The Rift (as a place name — "rift" is reserved for the travel mechanism itself, not the destination)
+
+**Dead Log**:
+The Otherworld's only tree remnant: a bare, leafless log block, standing in short stacked trunks or lying fallen on its side. No leaves, branches, or saplings — the Otherworld doesn't grow anything back.
+_Avoid_: Dead Wood, Dead Tree (as a block name — "Dead Tree" is the worldgen feature that places Dead Logs, not the block itself)
 
 **Bleed-through**:
 The phenomenon of the Otherworld leaking into the Overworld. Blood Pools are physical evidence of it, not blood in the literal sense. The Otherworld's own terrain does not generate Blood Pools — they only appear via Laceration or the Overworld bleed-through itself.

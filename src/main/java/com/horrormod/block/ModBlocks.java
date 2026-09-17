@@ -2,6 +2,7 @@ package com.horrormod.block;
 
 import com.horrormod.HorrorMod;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
@@ -33,6 +34,12 @@ public class ModBlocks
                     .mapColor(MapColor.COLOR_RED)
                     .strength(0.6f)
                     .sound(SoundType.NETHERRACK)));
+
+    public static final RegistryObject<Block> DEAD_LOG = BLOCKS.register("dead_log",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_GRAY)
+                    .strength(2.0f)
+                    .sound(SoundType.WOOD)));
 
     // Not obtainable as an item -- only ever placed/removed by the Ritualistic Dagger and its own expiry tick.
     // A thin, ground-flush fissure two blocks long (near/far halves), not a standing portal.

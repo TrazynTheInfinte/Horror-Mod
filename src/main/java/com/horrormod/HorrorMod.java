@@ -9,6 +9,7 @@ import com.horrormod.potion.ModBrewing;
 import com.horrormod.potion.ModPotions;
 import com.horrormod.structure.ModStructurePieces;
 import com.horrormod.structure.ModStructures;
+import com.horrormod.worldgen.ModFeatures;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -38,6 +39,7 @@ public class HorrorMod
                         output.accept(ModItems.BLOOD_SOAKED_QUILL.get());
                         output.accept(ModItems.OTHERWORLD_STONE.get());
                         output.accept(ModItems.OTHERWORLD_GROUND.get());
+                        output.accept(ModItems.DEAD_LOG.get());
                         output.accept(ModItems.RITUALISTIC_DAGGER.get());
                         output.accept(ModItems.CULTIST_CROSSBOW.get());
                         output.accept(ModItems.CULTIST_AXE.get());
@@ -56,6 +58,7 @@ public class HorrorMod
         ModStructures.STRUCTURE_TYPES.register(modEventBus);
         ModStructurePieces.STRUCTURE_PIECES.register(modEventBus);
         ModEntities.ENTITY_TYPES.register(modEventBus);
+        ModFeatures.FEATURES.register(modEventBus);
 
         HorrorModNetwork.register();
 
